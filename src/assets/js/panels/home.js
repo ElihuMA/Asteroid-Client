@@ -7,6 +7,26 @@ import { config, database, logger, changePanel, appdata, setStatus, pkg, popup }
 const { Launch } = require('minecraft-java-core')
 const { shell, ipcRenderer } = require('electron')
 
+const RPC = require('discord-rpc');
+const clientId = '1269722531582181387'; // Reemplaza con tu Client ID de Discord
+
+RPC.register(clientId);
+
+const rpc = new RPC.Client({ transport: 'ipc' });
+
+rpc.on('ready', () => {
+    console.log('Discord RPC está listo');
+    rpc.setActivity({
+        details: 'Esperando en el launcher',
+        startTimestamp: new Date(),
+        largeImageKey: 'eclipsenew',
+        largeImageText: 'Eclipse Client',
+        instance: false,
+    });
+});
+
+rpc.login({ clientId }).catch(console.error);
+
 class Home {
     static id = "home";
     async init(config) {
@@ -300,18 +320,38 @@ class Home {
             ipcRenderer.send('main-window-progress-load')
             infoStarting.innerHTML = `Demarrage en cours...`
             console.log(e);
+            if (rpc) {
+                rpc.setActivity({
+                    details: `Jugando a '${options.name}'`,
+                    startTimestamp: new Date(),
+                    largeImageKey: 'eclipsenew', // Reemplaza con la clave de tu imagen grande
+                    largeImageText: 'Eclipse Client',
+                    instance: false,
+                });
+            }
         })
 
         launch.on('close', code => {
             if (configClient.launcher_config.closeLauncher == 'close-launcher') {
-                ipcRenderer.send("main-window-show")
+                ipcRenderer.send("main-window-show");
             };
-            ipcRenderer.send('main-window-progress-reset')
-            infoStartingBOX.style.display = "none"
-            playInstanceBTN.style.display = "flex"
-            infoStarting.innerHTML = `Vérification`
+            ipcRenderer.send('main-window-progress-reset');
+            infoStartingBOX.style.display = "none";
+            playInstanceBTN.style.display = "flex";
+            infoStarting.innerHTML = `Vérification`;
             new logger(pkg.name, '#7289da');
             console.log('Close');
+        
+            // Cambiar el estado de Discord RPC cuando el juego se cierre
+            if (rpc) {
+                rpc.setActivity({
+                    details: 'Esperando en el launcher',
+                    startTimestamp: new Date(),
+                    largeImageKey: 'eclipsenew', // Reemplaza con la clave de tu imagen grande
+                    largeImageText: 'Eclipse Client',
+                    instance: false,
+                });
+            }
         });
 
         launch.on('error', err => {
