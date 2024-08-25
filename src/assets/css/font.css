@@ -37,6 +37,13 @@
 }
 
 @font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Social-icons';
     src: url('../fonts/social-icons.woff2') format('woff2');
     font-weight: normal;
@@ -65,7 +72,7 @@
 .icon-account-delete:before { font-family: "Icons"; content: "\e902"; }
 .icon-settings:before { font-family: "Icons"; content: "\e909"; }
 .icon-monitor:before { font-family: "Icons"; content: "\e90a"; }
-.icon-arrow:before { font-family: "Social-icons"; content: "\e002"; }
+.icon-arrow:before { font-family: "icomoon"; content: "\e900"; }
 
 .icon-discord { background-image: url('../images/svgs/discord.svg'); background-size: contain; }
 .icon-facebook { background-image: url('../images/svgs/facebook.svg'); background-size: contain; }

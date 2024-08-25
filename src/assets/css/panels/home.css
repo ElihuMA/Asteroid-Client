@@ -87,7 +87,7 @@
  ******************************************************************************/
 
 .new-tab {
-    left: 200px;
+    left: 234px;
     position: relative;
     top: 350px;
     display: flex;
@@ -101,7 +101,7 @@
     font-family: 'MinecraftTen-VGORe';
     margin-top: 1rem;
     position: relative;
-    left: 34px;
+    left: px;
     top: -2px;
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
@@ -110,6 +110,17 @@
     color: var(--color);
     font-weight: 100; /* Ajusta el valor para hacer la fuente más delgada */
 }
+
+.titre-tab-new:after {
+    content: '\e900'; /* El Unicode del ícono */
+    font-family: 'IcoMoon'; /* Asegúrate de que la fuente IcoMoon esté cargada */
+    display: block;
+    font-size: 0.9rem; /* Ajusta el tamaño del ícono */
+    color: var(--color); /* Aplica el mismo color que el texto principal */
+    margin-top: 0.5rem; /* Espacio entre el texto y el ícono */
+    text-align: center; /* Centra el ícono debajo del texto */
+}
+
 
 .news-list {
     width: 90%;
@@ -122,8 +133,11 @@
     width: 100%;
     margin: 0 0 1rem 0;
     border-radius: 10px;
-    background: #f8f9f914;
+    background: rgba(248, 249, 249, 0.14); /* Asegúrate de que el fondo tenga transparencia */
+    backdrop-filter: blur(3px); /* Aplica el desenfoque */
+    -webkit-backdrop-filter: blur(3px); /* Para compatibilidad con Safari */
 }
+
 
 .news-header {
     display: flex;
@@ -201,6 +215,7 @@
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(3px); /* Aplica desenfoque al fondo */
 }
 
 .social-block .icon-social {
@@ -260,6 +275,7 @@
 }
 
 .play-instance {
+    left: -5.5%;
     background: url('../../images/default/Jugar.png'), no-repeat;
     background-size: cover;
     image-rendering: pixelated;
@@ -298,14 +314,14 @@
     align-items: center;
     right: 310px; /* Asegúrate de especificar las unidades */
     color: #f8f9f9;
-    font-size: 12px;
+    font-size: 10px;
     height: 2rem;
     border: 0px solid #ffffff;
     text-align: center;
     border-radius: 0px;
     padding: 0 0.25rem;
     cursor: pointer;
-    background: rgba(245, 245, 245, 0.2); /* Fondo semitransparente */
+    background: rgba(248, 249, 249, 0.14);
     backdrop-filter: blur(3px); /* Aplica un desenfoque al fondo */
     -webkit-backdrop-filter: blur(3px); /* Para compatibilidad con Safari */
 }
@@ -313,13 +329,12 @@
 
 .instance-select:before {
     font-weight: 1;
-    transform: rotate(270deg);
     pointer-events: none;
 }
 
 .instance-name-display {
     position: relative;
-    background: rgba(245, 245, 245, 0.2); /* Fondo semitransparente */
+        background: rgba(248, 249, 249, 0.14);
     left: -332px;
     font-size: 12px;
     padding: 7px 20px; /* Aumenta el espacio alrededor del texto */
@@ -352,13 +367,21 @@
 }
 
 .settings-btn {
+    background: url('../../images/default/Settings.png'), no-repeat;
+    background-size: cover;
+    left: -1170px;
     position: relative;
-    width: 3rem;
+    width: 3.9rem;
+    position: relative;
+    top: -20px;
     height: 3rem;
-    font-size: 3rem;
+    font-size: 0rem;
     color: var(--element-color);
-    margin: 0 1.5rem;
+    margin: 0 0rem;
+    transform: scale(2); /* Aumenta el tamaño del botón en un 50% */
+    border: none; /* Opcional: quita el borde del botón si es necesario */
 }
+
 
 .instance-popup {
     position: absolute;
