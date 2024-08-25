@@ -112,6 +112,11 @@ class Home {
             document.querySelector('.instance-select').style.display = 'none'
             instanceBTN.style.paddingRight = '0'
         }
+            let instanceNameDisplay = document.createElement('div');
+            instanceNameDisplay.classList.add('instance-name-display');
+            instanceBTN.appendChild(instanceNameDisplay);
+        
+            instanceNameDisplay.textContent = instanceSelect;       
 
         if (!instanceSelect) {
             let newInstanceSelect = instancesList.find(i => i.whitelistActive == false)
@@ -120,6 +125,7 @@ class Home {
             instanceSelect = newInstanceSelect.name
             await this.db.updateData('configClient', configClient)
         }
+
 
         for (let instance of instancesList) {
             if (instance.whitelistActive) {
@@ -143,6 +149,7 @@ class Home {
 
             if (e.target.classList.contains('instance-elements')) {
                 let newInstanceSelect = e.target.id
+                instanceNameDisplay.textContent = newInstanceSelect;
                 let activeInstanceSelect = document.querySelector('.active-instance')
 
                 if (activeInstanceSelect) activeInstanceSelect.classList.toggle('active-instance');
@@ -157,6 +164,7 @@ class Home {
                 await setStatus(options.status)
             }
         })
+
 
         instanceBTN.addEventListener('click', async e => {
             let configClient = await this.db.readData('configClient')
