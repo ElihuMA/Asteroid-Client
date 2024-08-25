@@ -98,7 +98,7 @@
     font-size: 2rem;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
-    background: var(--background-transparent);
+    background: #2c2c2c00;
     color: var(--color);
 }
 
@@ -140,7 +140,6 @@
     padding: 0 1.5rem;
     padding-bottom: 1rem;
     font-size: 1.2rem;
-
 }
 
 .news-content .bbWrapper p {
@@ -214,10 +213,12 @@
     align-items: center;
     width: 100%;
     height: 90px;
-    background: var(--background-transparent);
+    background: #2c2c2c00;
 }
 
 .player-options {
+    position: relative;
+    top: -635px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -250,17 +251,24 @@
 }
 
 .play-instance {
+    background: url('../../images/default/Jugar.png'), no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    top: -70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    border: solid 3px var(--element-color);
+    border: solid 0px #00bd7a00;
     border-radius: 15px;
-    height: 3.2rem;
-    padding-right: 1.9rem;
+    height: 4.6rem;
+    width: 19rem;
 }
 
 .play-btn {
+    position: relative;
+    left: 27%;
+    top: -2px;
     border: none;
     border-radius: 10px;
     background: none;
@@ -272,10 +280,11 @@
 }
 
 .instance-select {
+    position: relative;
     display: flex;
     align-items: center;
     position: absolute;
-    right: -3;
+    right: 400;
     top: -2;
     color: var(--element-color);
     font-size: 1rem;

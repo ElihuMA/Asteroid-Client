@@ -77,13 +77,13 @@ class Home {
                             <div class="title">Error.</div>
                         </div>
                         <div class="date">
-                            <div class="day">1</div>
-                            <div class="month">Janvier</div>
+                            <div class="day">News</div>
+                            <div class="month">Error</div>
                         </div>
                     </div>
                     <div class="news-content">
                         <div class="bbWrapper">
-                            <p>Impossible de contacter le serveur des news.</br>Merci de vérifier votre configuration.</p>
+                            <p>No se puedieron cargar los anunciones</br>porfavor revisa que todo este en orden.</p>
                         </div>
                     </div>`
             newsElement.appendChild(blockNews);
