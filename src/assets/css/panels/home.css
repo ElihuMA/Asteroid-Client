@@ -12,6 +12,7 @@
  ******************************************************************************/
 
 .status-server {
+    top: -99999;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -86,14 +87,14 @@
  ******************************************************************************/
 
 .new-tab {
-    left: 70px;
+    left: 200px;
     position: relative;
     top: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 85%;
-    height: 48.1628%;
+    width: 65%;
+    height: 47.3%;
 }
 
 .titre-tab-new {
@@ -121,7 +122,7 @@
     width: 100%;
     margin: 0 0 1rem 0;
     border-radius: 10px;
-    background: var(--background-transparent);
+    background: #f8f9f914;
 }
 
 .news-header {
@@ -173,11 +174,12 @@
  ******************************************************************************/
 
 .social-tab {
+    top: 1px;
     position: absolute;
     display: flex;
     bottom: 0;
     right: 0;
-    width: 15%;
+    width: 10%;
     height: calc(80% - 1rem);
     justify-content: center;
     margin-bottom: 1rem;
@@ -190,7 +192,7 @@
 
 .social-block {
     display: flex;
-    background: var(--background-transparent);
+    background: #f8f9f914;
     width: 90px;
     height: 90px;
     margin-bottom: 1rem;
@@ -272,6 +274,7 @@
     height: 4.6rem;
     width: 19rem;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .play-btn {
@@ -295,19 +298,21 @@
     display: flex;
     align-items: center;
     position: absolute;
-    right: 400;
-    top: -2;
-    color: var(--element-color);
-    font-size: 1rem;
+    right: 315;
+    color: #f8f9f9;
+    font-size: 13px;
     height: calc(100% - 1px);
-    border: solid 3px var(--element-color);
+    border: solid 0px #ffffff;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 0px;
     padding: 0 0.5rem;
     cursor: pointer;
+    height: 3rem;
+    background: rgb(245 245 245 / 24%);
 }
 
 .instance-select:before {
+    font-weight: 1;
     transform: rotate(270deg);
     pointer-events: none;
 }
@@ -335,6 +340,7 @@
 }
 
 .settings-btn {
+    position: relative;
     width: 3rem;
     height: 3rem;
     font-size: 3rem;

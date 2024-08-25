@@ -1,7 +1,7 @@
 {
     "name": "Eclipse-Client",
     "preductname": "Eclipse Client",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Cliente official de 'Eclipse Studios'",
     "main": "src/app.js",
     "author": {

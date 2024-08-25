@@ -27,7 +27,6 @@ class Home {
                 blockNews.classList.add('news-block');
                 blockNews.innerHTML = `
                     <div class="news-header">
-                        <img class="server-status-icon" src="assets/images/icon.png">
                         <div class="header-text">
                             <div class="title">Aucun news n'ai actuellement disponible.</div>
                         </div>
@@ -49,7 +48,6 @@ class Home {
                     blockNews.classList.add('news-block');
                     blockNews.innerHTML = `
                         <div class="news-header">
-                            <img class="server-status-icon" src="assets/images/icon.png">
                             <div class="header-text">
                                 <div class="title">${News.title}</div>
                             </div>
@@ -61,7 +59,7 @@ class Home {
                         <div class="news-content">
                             <div class="bbWrapper">
                                 <p>${News.content.replace(/\n/g, '</br>')}</p>
-                                <p class="news-author">Auteur - <span>${News.author}</span></p>
+                                <p class="news-author">Publicado por - <span>${News.author}</span></p>
                             </div>
                         </div>`
                     newsElement.appendChild(blockNews);
@@ -72,7 +70,6 @@ class Home {
             blockNews.classList.add('news-block');
             blockNews.innerHTML = `
                 <div class="news-header">
-                        <img class="server-status-icon" src="assets/images/icon.png">
                         <div class="header-text">
                             <div class="title">Error.</div>
                         </div>
@@ -336,7 +333,7 @@ class Home {
         let year = date.getFullYear()
         let month = date.getMonth() + 1
         let day = date.getDate()
-        let allMonth = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
+        let allMonth = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
         return { year: year, month: allMonth[month - 1], day: day }
     }
 }
