@@ -1,15 +1,15 @@
 {
-    "name": "Eclipse-Client",
-    "preductname": "Eclipse Client",
-    "version": "1.0.1",
-    "description": "Cliente official de 'Eclipse Studios'",
+    "name": "Asteroid-Client",
+    "preductname": "Asteroid Client",
+    "version": "1.0.0",
+    "description": "Cliente official de 'Asteroid Studios'",
     "main": "src/app.js",
     "author": {
-        "name": "Drago",
+        "name": "IgnExotic",
         "email": "Drago@contact.cloud",
         "url": "https://github.com/Drago"
     },
-    "url": "https://patricio.newar.cloud/Launchers/EclipseClient/",
+    "url": "http://163.5.120.163:25575/",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
@@ -40,6 +40,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/patriciocaussin/Eclipse-Client.git"
+        "url": "git+https://github.com/ElihuMA/Asteroid-Client.git"
     }
 }
