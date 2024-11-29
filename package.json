@@ -1,7 +1,7 @@
 {
     "name": "Asteroid-Client",
     "preductname": "Asteroid Client",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Cliente official de 'Asteroid Studios'",
     "main": "src/app.js",
     "author": {
@@ -9,7 +9,7 @@
         "email": "Drago@contact.cloud",
         "url": "https://github.com/Drago"
     },
-    "url": "http://163.5.120.163:25575/",
+    "url": "http://163.5.120.163:25575",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
