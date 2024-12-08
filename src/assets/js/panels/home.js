@@ -8,7 +8,7 @@ const { Launch } = require('minecraft-java-core')
 const { shell, ipcRenderer } = require('electron')
 
 const RPC = require('discord-rpc');
-const clientId = '1269722531582181387'; // Reemplaza con tu Client ID de Discord
+const clientId = '1311466274705903636'; // Reemplaza con tu Client ID de Discord
 
 RPC.register(clientId);
 
@@ -19,8 +19,8 @@ rpc.on('ready', () => {
     rpc.setActivity({
         details: 'Esperando en el launcher',
         startTimestamp: new Date(),
-        largeImageKey: 'eclipsenew',
-        largeImageText: 'Eclipse Client',
+        largeImageKey: 'icon',
+        largeImageText: 'Asteroid Client',
         instance: false,
     });
 });
@@ -324,8 +324,8 @@ class Home {
                 rpc.setActivity({
                     details: `Jugando a '${options.name}'`,
                     startTimestamp: new Date(),
-                    largeImageKey: 'eclipsenew', // Reemplaza con la clave de tu imagen grande
-                    largeImageText: 'Eclipse Client',
+                    largeImageKey: 'icon', // Reemplaza con la clave de tu imagen grande
+                    largeImageText: 'Asteroid Client',
                     instance: false,
                 });
             }
@@ -347,8 +347,8 @@ class Home {
                 rpc.setActivity({
                     details: 'Esperando en el launcher',
                     startTimestamp: new Date(),
-                    largeImageKey: 'eclipsenew', // Reemplaza con la clave de tu imagen grande
-                    largeImageText: 'Eclipse Client',
+                    largeImageKey: 'icon', // Reemplaza con la clave de tu imagen grande
+                    largeImageText: 'Asteroid Client',
                     instance: false,
                 });
             }

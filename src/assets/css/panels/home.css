@@ -89,7 +89,7 @@
 .new-tab {
     left: 234px;
     position: relative;
-    top: 350px;
+    top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -275,11 +275,11 @@
 }
 
 .play-instance {
-    left: -5.5%;
+    left: 150%;
     background: url('../../images/default/Jugar.png'), no-repeat;
     background-size: cover;
     image-rendering: pixelated;
-    top: -230px;
+    top: -20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -367,18 +367,18 @@
 }
 
 .settings-btn {
-    background: url('../../images/default/Settings.png'), no-repeat;
+    background: url('../../images/default/Settings3.png'), no-repeat;
     background-size: cover;
     left: -1170px;
     position: relative;
-    width: 3.9rem;
+    width: 3.1rem;
     position: relative;
     top: -20px;
     height: 3rem;
     font-size: 0rem;
     color: var(--element-color);
     margin: 0 0rem;
-    transform: scale(2); /* Aumenta el tamaño del botón en un 50% */
+    transform: scale(1); /* Aumenta el tamaño del botón en un 50% */
     border: none; /* Opcional: quita el borde del botón si es necesario */
 }
 

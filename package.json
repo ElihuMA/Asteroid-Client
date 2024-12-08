@@ -1,15 +1,15 @@
 {
     "name": "Asteroid-Client",
     "preductname": "Asteroid Client",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Cliente official de 'Asteroid Studios'",
     "main": "src/app.js",
     "author": {
         "name": "IgnExotic",
-        "email": "Drago@contact.cloud",
-        "url": "https://github.com/Drago"
+        "email": "IgnExoticJr@gmail.com",
+        "url": "https://github.com/tuhermana"
     },
-    "url": "http://163.5.120.163:25575",
+    "url": "http://163.5.120.163:25570/asteroid",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
